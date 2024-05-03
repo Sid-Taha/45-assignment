@@ -21,7 +21,7 @@ console.log('\nWe found a bigger dinner table');
 // Add one new guest to the beginning of your array.
 let guestName1 = guestList.unshift('faiza');
 // Add one new guest to the middle of your array.
-let guestName2 = guestList.splice(2, 0, 'Bisma');
+let guestName2 = guestList.splice((guestList.length / 2), 0, "bisma");
 // Use append() to add one new guest to the end of your list.
 let guestName3 = guestList.push('Siddiqui');
 // Print a new set of invitation messages, one for each person in your list.
@@ -39,3 +39,11 @@ foorloop();
 let removeGuest5 = guestList.splice(0, 2);
 // Print your list to make sure you actually have an empty list at the end of your program.
 console.log(guestList);
+//floor
+//4.3
+//4.7
+console.log(Math.floor(4.7));
+//ceil
+//4.3
+//4.7
+console.log(Math.ceil(4.05));

@@ -32,7 +32,7 @@ console.log('\nWe found a bigger dinner table');
 let guestName1 = guestList.unshift('faiza')
 
 // Add one new guest to the middle of your array.
-let guestName2 = guestList.splice(2,0,'Bisma')
+let guestName2 =  guestList.splice(Math.floor((guestList.length / 2)), 0, "bisma") 
 
 // Use append() to add one new guest to the end of your list.
 let guestName3 = guestList.push('Siddiqui')
