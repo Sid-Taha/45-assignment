@@ -24,6 +24,7 @@ let random_index = Math.floor(Math.random() * 4)
  let random_enemy = enemies[random_index]
 
 //-----------------------------------welcome msg------------------------------------
+console.clear()
 console.log("\n\t--------- Welcome to Adventure Game ---------");
 
 //-----------------------------------name --------------------------------
@@ -91,12 +92,20 @@ console.log("\n\t\tThank you for play this game");
 
 
 function information() {
-if(hero_health < 0){
-     hero_health = 0
-}
-
-if (enemy_healt < 0) {
-     enemy_healt = 0
+if (hero_health < 0 && enemy_healt < 0){
+     if(hero_health > enemy_healt) {
+          hero_health = 1
+     }else{
+          enemy_healt = 1
+     }
+}else {
+     if(hero_health < 0){
+          hero_health = 0
+     }
+     
+     if (enemy_healt < 0) {
+          enemy_healt = 0
+     }
 }
     
 //-----------------------------------hero information--------------------------------

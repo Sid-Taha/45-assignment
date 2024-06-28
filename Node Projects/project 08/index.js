@@ -19,6 +19,7 @@ let random_enemy_attacking_power = Math.floor(Math.random() * enemy_attacking_po
 let random_index = Math.floor(Math.random() * 4);
 let random_enemy = enemies[random_index];
 //-----------------------------------welcome msg------------------------------------
+console.clear();
 console.log("\n\t--------- Welcome to Adventure Game ---------");
 //-----------------------------------name --------------------------------
 let name = await inquirer.prompt({
@@ -67,11 +68,21 @@ while (enemy_healt > 0) {
 }
 console.log("\n\t\tThank you for play this game");
 function information() {
-    if (hero_health < 0) {
-        hero_health = 0;
+    if (hero_health < 0 && enemy_healt < 0) {
+        if (hero_health > enemy_healt) {
+            hero_health = 1;
+        }
+        else {
+            enemy_healt = 1;
+        }
     }
-    if (enemy_healt < 0) {
-        enemy_healt = 0;
+    else {
+        if (hero_health < 0) {
+            hero_health = 0;
+        }
+        if (enemy_healt < 0) {
+            enemy_healt = 0;
+        }
     }
     //-----------------------------------hero information--------------------------------
     console.log("\n\t\t Hero Information");
