@@ -67,6 +67,12 @@ while (enemy_healt > 0) {
 }
 console.log("\n\t\tThank you for play this game");
 function information() {
+    if (hero_health < 0) {
+        hero_health = 0;
+    }
+    if (enemy_healt < 0) {
+        enemy_healt = 0;
+    }
     //-----------------------------------hero information--------------------------------
     console.log("\n\t\t Hero Information");
     console.log("---------------------------------------------------");
