@@ -125,3 +125,4 @@ Your correct answare: ${point}
 Your incorrect answare: ${3 - point}
 you got ${point} points`);
 }
+console.log("\t\t---------- Thank you for playing Quiz game ----------\n");
