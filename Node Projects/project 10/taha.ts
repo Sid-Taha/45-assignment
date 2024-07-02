@@ -6,14 +6,14 @@ import inquirer from "inquirer"
 // 1 jan 1970 00:00:00
 
 // '2025-01-01T00:00:00'
-let a = await inquirer.prompt({
-    name: "ans",
-    type:"input",
-    message: "what is your date of birth ('year-month-days')"
-})
+// let a = await inquirer.prompt({
+//     name: "ans",
+//     type:"input",
+//     message: "what is your date of birth ('year-month-days')"
+// })
 
 let timer =  setInterval(()=>{
-let newYear_2025 = new Date(a.ans + "T00:00:00")
+let newYear_2025 = new Date('2024-07-01T05:11:00')
 let now = new Date()
 
 let diff = newYear_2025.getTime() - now.getTime()
@@ -26,13 +26,11 @@ let min = Math.floor(diff % (1000 * 60 * 60) / (1000 * 60))
 
 let sec = Math.floor(diff % (1000 * 60) / (1000))   
 
-console.log(`Date:${days} - Hours:${hours} - Minutes:${min} - Second:${sec}`);
+console.log(`Days:${days} - Hours:${hours} - Minutes:${min} - Second:${sec}`);
 
 if(days < 0 && hours < 0 && min < 0 && sec < 0){
     clearInterval(timer)
-
     console.log("Time Up");
-    
 }
 
 }, 1000)
